@@ -12,6 +12,30 @@ A full-stack e-commerce web application built from scratch with a React/TypeScri
 - **Profile management** — update name, email, phone number, and address.
 - **Security** — Helmet, rate limiting on sensitive routes (login/signup/checkout), input validation, ownership checks on every order/return lookup.
 
+## Screenshots
+
+<p align="center">
+  <a href="./frontend/public/screenshots/product-catalog.png">
+    <img src="./frontend/public/screenshots/product-catalog.png" alt="Product catalog with product details and cart controls" width="180" />
+  </a>
+  <a href="./frontend/public/screenshots/category-browser.png">
+    <img src="./frontend/public/screenshots/category-browser.png" alt="Category browser for clothing, shoes, and accessories" width="180" />
+  </a>
+  <a href="./frontend/public/screenshots/cart.png">
+    <img src="./frontend/public/screenshots/cart.png" alt="Shopping cart with quantity controls and checkout total" width="180" />
+  </a>
+  <a href="./frontend/public/screenshots/orders-and-returns.png">
+    <img src="./frontend/public/screenshots/orders-and-returns.png" alt="Order history with delivery status and return request flow" width="180" />
+  </a>
+  <a href="./frontend/public/screenshots/sign-up.png">
+    <img src="./frontend/public/screenshots/sign-up.png" alt="Account creation form" width="180" />
+  </a>
+</p>
+
+<p align="center">
+  Click an image to view it in full size.
+</p>
+
 ## Tech stack
 
 **Frontend:** React 19, TypeScript, Vite, React Router, TanStack Query (React Query), Axios, CSS Modules
