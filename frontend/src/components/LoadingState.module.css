@@ -1,0 +1,68 @@
+.loadingState {
+  display: flex;
+  min-height: 180px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 32px 20px;
+  color: var(--shop-cream);
+  font-family: var(--sans);
+  text-align: center;
+}
+
+.fullPage {
+  min-height: 52vh;
+}
+
+.mark {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 30px;
+}
+
+.mark span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--shop-gold);
+  animation: loadingPulse 1s ease-in-out infinite;
+}
+
+.mark span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.mark span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.loadingState p {
+  margin: 0;
+  color: var(--shop-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+@keyframes loadingPulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0) scale(0.85);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mark span {
+    animation: none;
+    opacity: 0.75;
+  }
+}

@@ -1,0 +1,31 @@
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #172033;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.backButton svg {
+  width: 34px;
+  height: 34px;
+  stroke-width: 2.1;
+}
+
+.backButton:hover,
+.backButton:focus-visible {
+  background: rgba(15, 118, 110, 0.1);
+  color: #0f766e;
+}
+
+.backButton:focus-visible {
+  outline: 2px solid #0f766e;
+  outline-offset: 3px;
+}

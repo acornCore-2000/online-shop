@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --shop-navy: #f6f8fb;
+  --shop-navy-light: #ffffff;
+  --shop-gold: #0f766e;
+  --shop-cream: #172033;
+  --shop-success: #4caf50;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+html {
+  background-color: var(--shop-navy);
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--shop-navy);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: var(--shop-navy);
+}
+
+.signup {
+  width: min(100%, 420px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 40px 32px;
+  background: var(--shop-navy-light);
+  border: 1px solid #dfe5ec;
+  border-radius: 6px;
+  box-shadow: 0 16px 36px rgba(23, 32, 51, 0.08);
+  color: var(--shop-cream);
+  box-sizing: border-box;
+}
+
+.title {
+  margin: 0 0 28px;
+  color: var(--shop-cream);
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  color: var(--shop-cream);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.input {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 6px;
+  outline: none;
+  background: #f8fafc;
+  color: var(--shop-cream);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.9rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.input::placeholder {
+  color: rgba(244, 239, 230, 0.45);
+}
+
+.input:focus {
+  border-color: var(--shop-gold);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.12);
+}
+
+.inputError {
+  border-color: #c94b4b !important;
+  box-shadow: 0 0 0 2px rgba(201, 75, 75, 0.1);
+}
+
+.passwordButton {
+  align-self: flex-end;
+  margin-top: -2px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--shop-gold);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.25s ease;
+}
+
+.passwordButton:hover {
+  opacity: 0.75;
+}
+
+.passwordStrength {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--shop-gold);
+}
+
+.error {
+  margin: 0;
+  color: #e57373;
+  font-size: 0.8rem;
+}
+
+.submitButton {
+  width: 100%;
+  height: 44px;
+  margin-top: 4px;
+  border: 1.5px solid var(--shop-gold);
+  border-radius: 6px;
+  background: var(--shop-gold);
+  color: var(--shop-navy);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: transparent;
+  color: var(--shop-gold);
+  transform: translateY(-2px);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.serverMessage {
+  margin: 0;
+  text-align: center;
+  color: var(--shop-success);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.serverMessageError {
+  color: #c94b4b;
+}
+
+.loginText {
+  margin: 24px 0 0;
+  text-align: center;
+  color: rgba(244, 239, 230, 0.7);
+  font-size: 0.85rem;
+}
+
+.loginLink {
+  color: var(--shop-gold);
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+
+.loginLink:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+
+@media (max-width: 480px) {
+  .signup {
+    width: 100%;
+    min-height: 100vh;
+    padding: 32px 20px;
+    border-radius: 0;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .input,
+  .passwordButton,
+  .submitButton,
+  .loginLink {
+    transition: none;
+  }
+
+  .submitButton:hover:not(:disabled) {
+    transform: none;
+  }
+}
+
+  .signup {
+    color: #172033;
+  }
+
+  .label,
+  .title {
+    color: #172033;
+  }
+
+  .input {
+    border-color: #cbd5e1;
+    background: #f8fafc;
+    color: #172033;
+  }
+
+  .input::placeholder,
+  .loginText {
+    color: #64748b;
+  }
+
+  .submitButton {
+    background: #0f766e;
+    border-color: #0f766e;
+    color: #ffffff;
+  }

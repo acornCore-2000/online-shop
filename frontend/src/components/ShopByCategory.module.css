@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+.grid {
+  --shop-navy: #f6f8fb;
+  --shop-navy-light: #ffffff;
+  --shop-gold: #0f766e;
+  --shop-cream: #172033;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(8px, 1.2vw, 14px);
+  padding: clamp(16px, 3vw, 32px);
+  background: var(--shop-navy);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--shop-cream);
+  background: var(--shop-navy-light);
+  border: 1px solid #dfe5ec;
+  box-shadow: 0 10px 24px rgba(23, 32, 51, 0.07);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  width: clamp(120px, 19vw, 180px);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover,
+.card:focus-visible {
+  border-color: var(--shop-gold);
+  transform: translateY(-3px);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--shop-gold);
+  outline-offset: 3px;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.06);
+}
+
+.name {
+  margin: 0;
+  padding: 6px 4px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: clamp(0.65rem, 0.9vw, 0.78rem);
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  transition: color 0.25s ease;
+}
+
+.card:hover .name {
+  color: var(--shop-gold);
+}
+
+@media (max-width: 480px) {
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: clamp(120px, 15vw, 180px);
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .image,
+  .name {
+    transition: none;
+  }
+
+  .card:hover .image {
+    transform: none;
+  }
+}

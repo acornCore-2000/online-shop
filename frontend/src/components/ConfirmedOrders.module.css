@@ -1,0 +1,146 @@
+.itemsCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border: 1px solid rgba(244, 239, 230, 0.08);
+  border-radius: 7px;
+  background: rgba(244, 239, 230, 0.02);
+  transition: border-color 0.2s ease;
+}
+
+.item:hover {
+  border-color: rgba(212, 175, 55, 0.25);
+}
+
+.itemImage {
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.itemName {
+  color: #f4efe6;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.itemPrice {
+  color: #d4af37;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.itemQuantity {
+  color: rgba(244, 239, 230, 0.45);
+  font-size: 0.75rem;
+}
+
+.pendingQuantityControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.quantityButton {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid rgba(15, 118, 110, 0.28);
+  border-radius: 50%;
+  background: transparent;
+  color: #0f766e;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.quantityButton:hover {
+  background: #0f766e;
+  border-color: #0f766e;
+  color: #ffffff;
+  transform: scale(1.06);
+}
+
+.quantityButtonRemove:hover {
+  background: #e05252;
+  border-color: #e05252;
+}
+
+.quantityButtonAdd:hover {
+  background: #0f766e;
+  border-color: #0f766e;
+}
+
+.quantityButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.quantityValue {
+  min-width: 18px;
+  color: #172033;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.itemsCard {
+  color: #172033;
+}
+
+.item {
+  border-color: #e2e8f0;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(23, 32, 51, 0.05);
+}
+
+.itemName,
+.itemQuantity {
+  color: #172033;
+}
+
+.itemPrice {
+  color: #0f766e;
+}
+
+.errorText {
+  margin: 0 0 12px;
+  color: #c94b4b;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .item {
+    padding: 12px;
+  }
+
+  .itemImage {
+    width: 55px;
+    height: 55px;
+  }
+
+  .itemName {
+    font-size: 0.85rem;
+  }
+}

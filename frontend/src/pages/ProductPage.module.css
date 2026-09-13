@@ -1,0 +1,12 @@
+.page {
+  background: #f6f8fb;
+  min-height: 100vh;
+  padding: clamp(16px, 3vw, 40px);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(12px, 2vw, 20px);
+  justify-content: center;
+}

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500&display=swap');
+
+.card {
+  --shop-navy: #f6f8fb;
+  --shop-navy-light: #ffffff;
+  --shop-gold: #0f766e;
+  --shop-cream: #172033;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(12px, 2vw, 24px);
+  padding: clamp(16px, 3vw, 32px);
+  background: var(--shop-navy);
+  min-height: 100vh;
+}
+
+.seasonCategory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--shop-cream);
+  background: var(--shop-navy-light);
+  border: 1px solid #dfe5ec;
+  box-shadow: 0 12px 28px rgba(23, 32, 51, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  width: clamp(200px, 30vw, 320px);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.seasonCategory:hover,
+.seasonCategory:focus-visible {
+  border-color: var(--shop-gold);
+  transform: translateY(-4px);
+}
+
+.seasonCategory:focus-visible {
+  outline: 2px solid var(--shop-gold);
+  outline-offset: 3px;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.seasonCategory:hover .image {
+  transform: scale(1.05);
+}
+
+.seasonCategory h3 {
+  margin: 0;
+  padding: 14px 16px;
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  width: 100%;
+  border-top: 2px solid transparent;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.seasonCategory:hover h3 {
+  border-top-color: var(--shop-gold);
+  color: var(--shop-gold);
+}
+
+@media (max-width: 480px) {
+  .card {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .seasonCategory {
+    width: clamp(140px, 45vw, 200px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seasonCategory,
+  .image,
+  .seasonCategory h3 {
+    transition: none;
+  }
+
+  .seasonCategory:hover .image {
+    transform: none;
+  }
+}

@@ -1,0 +1,218 @@
+.itemsCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.returnInstruction {
+  margin: 0;
+  color: rgba(244, 239, 230, 0.65);
+  font-size: 0.85rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border: 1px solid rgba(244, 239, 230, 0.08);
+  border-radius: 7px;
+  background: rgba(244, 239, 230, 0.02);
+}
+
+.item:has(.returnAccepted),
+.item:has(.returnPending) {
+  border-color: rgba(190, 63, 63, 0.55);
+  background: rgba(145, 34, 34, 0.12);
+  box-shadow: 0 0 16px rgba(190, 63, 63, 0.18);
+}
+
+.itemSelector {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: auto;
+  color: #d4af37;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.itemSelector input {
+  accent-color: #d4af37;
+}
+
+.itemImage {
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.itemName {
+  color: #f4efe6;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.itemPrice {
+  color: #6fc489;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.itemQuantity {
+  color: rgba(244, 239, 230, 0.45);
+  font-size: 0.75rem;
+}
+
+.returnAccepted,
+.returnPending {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #e06a6a;
+}
+
+.returnAccepted {
+  color: #ef5b5b;
+}
+
+.returnPending {
+  color: #e06a6a;
+}
+
+.returnForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 8px;
+}
+
+.reasonLabel {
+  color: #f4efe6;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.reasonInput {
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  padding: 10px 12px;
+  border: 1px solid rgba(244, 239, 230, 0.15);
+  border-radius: 5px;
+  background: rgba(244, 239, 230, 0.04);
+  color: #f4efe6;
+  font: inherit;
+  font-size: 0.8rem;
+}
+
+.reasonInput:focus {
+  outline: 1px solid rgba(212, 175, 55, 0.55);
+}
+
+.reasonInputError {
+  border-color: #c94b4b !important;
+  box-shadow: 0 0 0 2px rgba(201, 75, 75, 0.1);
+}
+
+.returnButton,
+.cancelReturnButton {
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.returnButton {
+  border: 0;
+  background: #b83f3f;
+  color: #fff1f1;
+}
+
+.returnButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.cancelReturnButton {
+  border: 1px solid rgba(244, 239, 230, 0.15);
+  background: transparent;
+  color: rgba(244, 239, 230, 0.7);
+}
+
+.confirmReturn p {
+  margin: 0 0 10px;
+  color: #f4efe6;
+  font-size: 0.84rem;
+}
+
+.confirmActions {
+  display: flex;
+  gap: 8px;
+}
+
+.returnError {
+  margin: 0;
+  color: #d87373;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 600px) {
+  .item {
+    padding: 12px;
+  }
+
+  .itemImage {
+    width: 55px;
+    height: 55px;
+  }
+
+  .itemName {
+    font-size: 0.85rem;
+  }
+
+  .itemSelector {
+    margin-left: 0;
+  }
+
+  .confirmActions {
+    flex-wrap: wrap;
+  }
+}
+
+.itemsCard {
+  color: #172033;
+}
+
+.item:not(:has(.returnAccepted)):not(:has(.returnPending)) {
+  border-color: #e2e8f0;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(23, 32, 51, 0.05);
+}
+
+.itemName,
+.reasonLabel,
+.confirmReturn p {
+  color: #172033;
+}
+
+.itemQuantity,
+.returnInstruction {
+  color: #64748b;
+}
+
+.reasonInput {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+  color: #172033;
+}
