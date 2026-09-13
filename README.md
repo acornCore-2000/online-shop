@@ -44,21 +44,26 @@ A full-stack e-commerce web application built from scratch with a React/TypeScri
 
 ## Project structure
 
+```text
 online-shop/
 ├── backend/
-│ ├── server.ts
-│ └── src/
-│ ├── routes/ # auth, products, cart, orders, profile, returns...
-│ ├── middleware/ # auth guard, rate limiting, error handling, validation
-│ └── config/ # database pool, CORS
+│   ├── database/
+│   │   └── schema.sql
+│   ├── server.ts
+│   └── src/
+│       ├── routes/       # auth, products, cart, orders, profile, returns...
+│       ├── middleware/   # auth guard, rate limiting, error handling, validation
+│       └── config/       # database pool, CORS
 └── frontend/
-└── src/
-├── pages/ # route-level views (Home, Cart, Checkout, Orders, Profile...)
-├── components/ # reusable UI (ProductCard, Header, order item lists...)
-├── api/ # Axios instances + typed API calls
-├── context/ # auth context
-└── lib/ # shared helpers
-
+    ├── public/
+    │   └── screenshots/
+    └── src/
+        ├── pages/        # route-level views (Home, Cart, Checkout, Orders, Profile...)
+        ├── components/   # reusable UI (ProductCard, Header, order item lists...)
+        ├── api/          # Axios instances + typed API calls
+        ├── context/      # auth context
+        └── lib/          # shared helpers
+```
 
 ## Getting started
 
@@ -79,16 +84,41 @@ cd online-shop
 ```bash
 cd backend
 npm install
-cp .env.example .env   # then fill in your own DB credentials and secrets
+cp .env.example .env
+cd ..
+```
+
+### 3. Database setup
+
+1. In pgAdmin, create a new PostgreSQL database named `online_shop`.
+
+2. From the project root, run:
+
+```bash
+psql -U postgres -d online_shop -f backend/database/schema.sql
+```
+
+3. Update `backend/.env` with your database credentials:
+
+```env
+DATABASE_URL=postgresql://postgres:YOUR_PASSWORD@localhost:5432/online_shop
+```
+
+4. Start the backend:
+
+```bash
+cd backend
 npm run dev
 ```
 
-### 3. Frontend setup
+### 4. Frontend setup
+
+Open a new terminal, then run:
 
 ```bash
-cd ../frontend
+cd frontend
 npm install
-cp .env.example .env   # point VITE_API_URL at your backend
+cp .env.example .env
 npm run dev
 ```
 
