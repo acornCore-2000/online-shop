@@ -32,9 +32,6 @@ A full-stack e-commerce web application built from scratch with a React/TypeScri
   <a href="./frontend/public/screenshots/orders-and-returns.png">
     <img src="./frontend/public/screenshots/orders-and-returns.png" alt="Order history with delivery status and return request flow" width="180" />
   </a>
-  <a href="./frontend/public/screenshots/sign-up.png">
-    <img src="./frontend/public/screenshots/sign-up.png" alt="Account creation form" width="180" />
-  </a>
 </p>
 
 <p align="center">
