@@ -1,4 +1,9 @@
 # Online Shop
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 A full-stack e-commerce web application built from scratch with a React/TypeScript frontend and a Node.js/Express/TypeScript backend, backed by PostgreSQL. It covers the full shopping flow: browsing products by category, cart management, checkout, order tracking, and returns — all behind a JWT-based authentication system.
 
