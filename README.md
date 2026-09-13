@@ -113,6 +113,12 @@ cd backend
 npm run dev
 ```
 
+5. Seed the database with sample products:
+
+```bash
+psql -U postgres -d online_shop -f backend/database/seed.sql
+```
+
 ### 4. Frontend setup
 
 Open a new terminal, then run:
